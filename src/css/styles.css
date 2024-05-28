@@ -1,12 +1,7 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
+
 @import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
+
+
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -14,12 +9,119 @@
   line-height: 24px;
   font-weight: 400;
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+  --primary-color: #3498db; /* Основний колір */
+  --secondary-color-for-white: #BCDFD1; /* Другорядний колір */
+  --accent-color-for-white: #00B068; /* Акцентний колір */
+  --secend-background-color-for-white: #E4E5E6;
+  --first-background-color-for-white: #F0F0F0; /* Фон */
+  --text-for-white: #292929; /* Текст */
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+/* Загальні стилі */
+body {
+    font-family: var(--font-family, Inter, Avenir, Helvetica, Arial, sans-serif);
+    font-size: var(--font-size, 16px);
+    line-height: var(--line-height, 24px);
+    font-weight: var(--font-weight, 400);
+    background-color: var(--first-background-color-for-white);
+    color: var(--text-for-white);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Стилі для Header секції */
+.mainHeader{
+  display: flex;
+  width: 100%;
+}
+
+.divHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--secend-background-color-for-white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Header-content, .Header-menu {
+    flex: 1;
+}
+
+.Header-content p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.Header-content span {
+    color: var(--accent-color-for-white);
+}
+
+.Header-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.Header-menu li {
+    font-size: 18px;
+    color: var(--text-for-white);
+    cursor: pointer;
+}
+
+.Header-menu li:hover {
+    color: var(--accent-color-for-white);
+    text-decoration: underline;
+}
+
+/* ------------- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 40px 20px;
+  background-color: var(--first-background-color);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.text-and-image {
+  display: flex;
+  gap: 20px;
+}
+
+.text-and-image h1 {
+  font-size: 56px;
+  font-weight: 900;
+  margin: 0;
+  line-height: 1.2;
+  text-align: start;
+}
+
+.fullstack-developer {
+  display: inline-block;
+  font-size: 64px;
+  color: var(--accent-color-for-white) ;/* Задає колір тексту */
+  white-space: nowrap; /* Запобігає розриву тексту на кілька рядків */
+}
+
+.profile-picture {
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  object-fit: cover;
 }
