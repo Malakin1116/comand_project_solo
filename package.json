@@ -1,11 +1,11 @@
 {
-  "name": "vanilla-app-template",
+  "name": "comand_project_solo",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/vanilla-app-template/",
+    "build": "vite build --base=/comand_project_solo/",
     "preview": "vite preview"
   },
   "devDependencies": {
