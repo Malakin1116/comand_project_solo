@@ -87,7 +87,7 @@ height: 64px;
   font-size: 24px;
   line-height: 24px;
   letter-spacing: 1.5px;
-  padding: 20px 36px;
+  padding: 20px;
 }
 .Header-logo-span {
   color: var(--accent-color-for-black);
@@ -95,7 +95,7 @@ height: 64px;
 
 .Header-menu {
   display: flex;
-  padding: 20px 36px;
+  padding: 20px;
 }
 .menu-items {
   display: none; /* Скрываем список по умолчанию */
@@ -165,17 +165,77 @@ height: 64px;
 
 .hero-main-div{
   display: flex;
+  flex-direction: column;
   width: 100%;
-  padding: 16px 20px;
-
+  padding: 16px 20px 0px 20px;
 }
-
+.hero-content{
+  display: flex;
+  width: 100%;
+  margin-top: 96px;
+}
 .hero-h1 {
   font-size: var(--font-size-h1-mobile);
   letter-spacing: var(--letter-spacing-h1-mobile);
   line-height: var(--line-height-h1-mobile);
 }
+.fullstack-developer-span{
+  color: var(--accent-color-for-black);
+}
+.profile-picture{
+  display: none;
+}
 
+.hero-div-button{
+  display: flex;
+  margin-top: 60px;
+  height: 96px;
+  width: 100%;
+}
+.hero-button{
+  display: flex;
+  font-size: var(--font-size-caption);
+  letter-spacing: var(--letter-spacing-caption);
+  line-height: var(--line-height-caption);
+  background-color: var(--first-background-color-for-black);
+  color: var(--text-for-black);
+  border: none;
+  align-items: center;
+}
+.hero-button span {
+  display: flex;
+  align-items: center;
+  margin-right: 8px; /* Відступ між іконкою і текстом */
+}
+.highlighted-text {
+  background-color: var(--secondary-color-for-black); /* Зелений фон для слова "PROJECT" */
+  border-radius: 16px;
+  padding: 0 8px; /* Внутрішні відступи для красивого вигляду */
+  color: var(--text-for-black);
+}
+.hero-div-span-for-style {
+  display: flex;
+  background-color: var(--secondary-color-for-black);
+  border-radius: 16px;
+  width: 165px;
+  height: 100%;
+}
+
+.hero-history-div{
+ margin-top: 40px;
+ width: 320px;
+}
+.hero-history-p{
+  font-family: var(--font-poppins-regular);
+  font-size: var(--font-size-caption-alt);
+    letter-spacing: var(--letter-spacing-caption-alt);
+    line-height: var(--line-height-caption-alt);
+    background-color: var(--first-background-color-for-black);
+    color: var(--text-for-black);
+}
+.hero-history-p-span{
+  color: var(--accent-color-for-black);
+}
 
 
 /* Медиа-запросы для планшетов и десктопов */
