@@ -7,27 +7,81 @@
     <title>Vanilla App Template</title>
     
     <script type="module" crossorigin src="/comand_project_solo/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/comand_project_solo/assets/index-3b99fc6e.css">
+    <link rel="stylesheet" href="/comand_project_solo/assets/index-cf7c6d07.css">
   </head>
   <body>
-    <header >
+    <header class="header-main">
       <div class="divHeader">
-    <div class="Header-content">
-        <p>Lloyd<span>Jefferson.</span></p>
+    <div class="Header-logo">
+        <p>LLOYD<span class="Header-logo-span">JEFFERSON.</span></p>
     </div>
 
     <div class="Header-menu">
-        <ul>
+        <div class="menu-title">
+            <!-- <svg width="24" height="24" viewBox="0 0 24 24">
+               
+                <path svg="/src/img/svgDev.svg"></path>
+            </svg> -->
+            <button id="openModalBtn">Open Modal</button>
+        </div>
+        <ul class="menu-items">
             <li>About me</li>
             <li>Projects</li>
             <li>Contacts</li>
         </ul>
     </div>
+    
 </div>
 
+
+<div class="modal" id="myModal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
+    </div>
+</div>
     </header>    
-    <section >
+    <section class="hero-section">
      
+
+<div class="hero-main-div">
+    <div class="hero-content">
+        <h1 class="hero-h1">HELLO, I AM
+            <span class="fullstack-developer-span">FULLSTACK DEVELOPER</span>
+        </h1>
+        <img src="../img/face.jpg" alt="Profile Picture" class="profile-picture">
+    </div>
+</div>
+
+<!-- 
+    <div class="hero-content">
+        <div class="text-and-image">
+            <h1 class="h1-desktop-tablet">HELLO, I AM</h1>
+            <img src="../img/face.jpg" alt="Profile Picture" class="profile-picture">
+        </div>
+        <h1 class="h1-desktop-tablet"><span class="fullstack-developer">FULLSTACK DEVELOPER</span></h1>
+    </div>
+
+    <div class="hero-description">
+        <div class="order-project-button">
+           <button>
+             <span></span>
+             <p></p>
+           </button>
+        </div>
+
+        <div class="order-project-p">
+            <p>I WORK WITH PEOPLE ALL OVER THE WORLD TO CREATE <span>IMPRESSIVE</span> AND <span>FUNCTIONAL WEBSITES</span> THAT REFLECT EACH CLIENT'S UNIQUE PERSONALITY.</p>
+        </div>
+    </div>
+    <div class="hero-social">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+    </div>
+ -->
+
     </section>
     
 
