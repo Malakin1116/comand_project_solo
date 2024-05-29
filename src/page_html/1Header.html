@@ -1,13 +1,29 @@
 <div class="divHeader">
-    <div class="Header-content">
-        <p>Lloyd<span>Jefferson.</span></p>
+    <div class="Header-logo">
+        <p>LLOYD<span class="Header-logo-span">JEFFERSON.</span></p>
     </div>
 
     <div class="Header-menu">
-        <ul>
+        <div class="menu-title">
+            <!-- <svg width="24" height="24" viewBox="0 0 24 24">
+               
+                <path svg="/src/img/svgDev.svg"></path>
+            </svg> -->
+            <button id="openModalBtn">Open Modal</button>
+        </div>
+        <ul class="menu-items">
             <li>About me</li>
             <li>Projects</li>
             <li>Contacts</li>
         </ul>
+    </div>
+    
+</div>
+
+
+<div class="modal" id="myModal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
     </div>
 </div>

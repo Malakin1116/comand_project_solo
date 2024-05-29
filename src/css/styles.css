@@ -30,9 +30,9 @@
   --letter-spacing-h3-desktop-tablet: 0.5px;
   --line-height-h3-desktop-tablet: 48px;
 
-  --font-size-body1: 16px;
+  --font-size-body: 16px;
   --letter-spacing-body1: 0.2px;
-  --line-height-body1: 24px;
+  --line-height-body: 24px;
 
   --font-size-caption: 20px;
   --letter-spacing-caption: 0.5px;
@@ -41,72 +41,142 @@
   --font-size-caption-alt: 18px;
   --line-height-caption-alt: 28px;
 
-  --primary-color: #3498db;
+
   --secondary-color-for-white: #BCDFD1;
   --accent-color-for-white: #00B068;
   --secend-background-color-for-white: #E4E5E6;
   --first-background-color-for-white: #F0F0F0;
   --text-for-white: #292929;
+
+  --secondary-color-for-black: #204136;
+  --accent-color-for-black: #14C57C;
+  --secend-background-color-for-black: #2A2D32;
+  --first-background-color-for-black: #1E2023;
+  --text-for-black: #F0F0F0;
+
 }
 
 body {
-  font-family: var(--font-family, Inter, Avenir, Helvetica, Arial, sans-serif);
-  font-size: var(--font-size, 16px);
-  line-height: var(--line-height, 24px);
-  font-weight: var(--font-weight, 400);
-  background-color: var(--first-background-color-for-white);
-  color: var(--text-for-white);
+  font-family: var(--font-impact);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  font-weight: 400;
+  background-color: var(--first-background-color-for-black);
+  color: var(--text-for-black);
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  
 }
 
-.hero-content {
+.header-main {
+display: flex;
+width: 100%;
+height: 64px;
+}
+.divHeader{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  padding: 20px;
-  background-color: var(--first-background-color);
-  background-image: url("/src/img/decorHero.png");
+  
+}
+.Header-logo {
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 1.5px;
+  padding: 20px 36px;
+}
+.Header-logo-span {
+  color: var(--accent-color-for-black);
 }
 
-.text-and-image {
+.Header-menu {
   display: flex;
-  flex-direction: column;
+  padding: 20px 36px;
+}
+.menu-items {
+  display: none; /* Скрываем список по умолчанию */
+  list-style-type: none;
+  position: relative;
+
+  padding: 0;
+}
+.menu-title {
+  display: flex;
   align-items: center;
-  gap: 20px;
+  cursor: pointer;
+}
+.menu-title svg {
+  margin-right: 8px;
 }
 
-.main-heading {
-  font-family: var(--font-impact);
+.modal {
+    display: none; /* Скрываем по умолчанию */
+    position: fixed; /* Остается на месте (фиксированное положение) */
+    z-index: 1; /* Размещение на передний план */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Включить прокрутку, если необходимо */
+    background-color: rgb(0,0,0); /* Черный фон с прозрачностью */
+    background-color: rgba(0,0,0,0.4); /* Черный фон с прозрачностью */
+}
+/* Модальное содержимое */
+.modal-content {
+    position: absolute;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+/* Кнопка закрытия (иконка "X") */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+.hero-section {
+  height: 968px;
+  width: 100%;
+  background-color: transform;
+  background-image: url(/img/decor.png);
+  background-size: cover; /* Это обеспечит, что изображение будет покрывать весь блок */
+  background-position: center; 
+}
+
+.hero-main-div{
+  display: flex;
+  width: 100%;
+  padding: 16px 20px;
+
+}
+
+.hero-h1 {
   font-size: var(--font-size-h1-mobile);
   letter-spacing: var(--letter-spacing-h1-mobile);
   line-height: var(--line-height-h1-mobile);
-  font-weight: 400;
-  text-align: center;
 }
 
-.fullstack-developer {
-  font-family: var(--font-impact);
-  font-size: var(--font-size-h1-mobile);
-  letter-spacing: var(--letter-spacing-h1-mobile);
-  line-height: var(--line-height-h1-mobile);
-  color: var(--accent-color-for-white);
-  white-space: nowrap;
-  text-align: center;
-}
 
-.profile-picture {
-  width: 108px;
-  height: 108px;
-  border-radius: 16px;
-  object-fit: cover;
-  padding: 20px 0px;
-}
 
 /* Медиа-запросы для планшетов и десктопов */
 @media (min-width: 768px) {
