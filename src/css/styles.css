@@ -137,7 +137,7 @@ body {
   height: 968px;
   width: 100%; 
   background-color: var(--first-background-color-for-black);
-  background-image: url(/img/decor.png);
+  background-image: url(/img/HeroDecorMobile.png);
   background-size: cover; /* Це забезпечить, що зображення буде покривати весь блок */
   background-position: center;
 }
@@ -254,6 +254,20 @@ body {
   color: var(--text-for-black);
 }
 
+.hero-main-open {
+  height: 760px;
+  width: 100%;
+  display: flex;
+}
+
+.menu-items-opens {
+  display: flex;
+  width: 100%;
+  gap: 24px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 @media (min-width: 360px) and (max-width: 767px) {
   .divHeader {
