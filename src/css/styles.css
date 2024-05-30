@@ -41,7 +41,6 @@
   --font-size-caption-alt: 18px;
   --line-height-caption-alt: 28px;
 
-
   --secondary-color-for-white: #BCDFD1;
   --accent-color-for-white: #00B068;
   --secend-background-color-for-white: #E4E5E6;
@@ -53,7 +52,6 @@
   --secend-background-color-for-black: #2A2D32;
   --first-background-color-for-black: #1E2023;
   --text-for-black: #F0F0F0;
-
 }
 
 body {
@@ -69,26 +67,28 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  
 }
 
 .header-main {
-display: flex;
-width: 100%;
-height: 64px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 64px;
 }
-.divHeader{
+
+.divHeader {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  
 }
+
 .Header-logo {
   font-size: 24px;
   line-height: 24px;
   letter-spacing: 1.5px;
   padding: 20px;
 }
+
 .Header-logo-span {
   color: var(--accent-color-for-black);
 }
@@ -97,102 +97,86 @@ height: 64px;
   display: flex;
   padding: 20px;
 }
+
 .menu-items {
   display: none; /* Скрываем список по умолчанию */
   list-style-type: none;
   position: relative;
-
   padding: 0;
 }
+
 .menu-title {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
+
 .menu-title svg {
   margin-right: 8px;
 }
 
-.modal {
-    display: none; /* Скрываем по умолчанию */
-    position: fixed; /* Остается на месте (фиксированное положение) */
-    z-index: 1; /* Размещение на передний план */
-    left: 0;
-    top: 0;
-    width: 100%; /* Полная ширина */
-    height: 100%; /* Полная высота */
-    overflow: auto; /* Включить прокрутку, если необходимо */
-    background-color: rgb(0,0,0); /* Черный фон с прозрачностью */
-    background-color: rgba(0,0,0,0.4); /* Черный фон с прозрачностью */
-}
-/* Модальное содержимое */
-.modal-content {
-    position: absolute;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
 /* Кнопка закрытия (иконка "X") */
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
+
 .close:hover,
 .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
-
-
 
 .hero-section {
   height: 968px;
   width: 100%;
-  background-color: transform;
+  background-color: var(--first-background-color-for-black);
   background-image: url(/img/decor.png);
   background-size: cover; /* Это обеспечит, что изображение будет покрывать весь блок */
-  background-position: center; 
+  background-position: center;
 }
 
-.hero-main-div{
+.hero-main-div {
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 16px 20px 0px 20px;
+  align-items: center; /* Центрування контенту по горизонталі */
 }
-.hero-content{
+
+.hero-content {
   display: flex;
   width: 100%;
   margin-top: 96px;
+  justify-content: center; /* Центрування контенту по горизонталі */
 }
+
 .hero-h1 {
   font-size: var(--font-size-h1-mobile);
   letter-spacing: var(--letter-spacing-h1-mobile);
   line-height: var(--line-height-h1-mobile);
 }
-.fullstack-developer-span{
+
+.fullstack-developer-span {
   color: var(--accent-color-for-black);
 }
-.profile-picture{
+
+.profile-picture {
   display: none;
 }
 
-.hero-div-button{
+.hero-div-button {
   display: flex;
   margin-top: 60px;
   height: 96px;
   width: 100%;
+  justify-content: center; /* Центрування кнопок */
 }
-.hero-button{
+
+.hero-button {
   display: flex;
   font-size: var(--font-size-caption);
   letter-spacing: var(--letter-spacing-caption);
@@ -202,17 +186,20 @@ height: 64px;
   border: none;
   align-items: center;
 }
+
 .hero-button span {
   display: flex;
   align-items: center;
   margin-right: 8px; /* Відступ між іконкою і текстом */
 }
+
 .highlighted-text {
   background-color: var(--secondary-color-for-black); /* Зелений фон для слова "PROJECT" */
   border-radius: 16px;
   padding: 0 8px; /* Внутрішні відступи для красивого вигляду */
   color: var(--text-for-black);
 }
+
 .hero-div-span-for-style {
   display: flex;
   background-color: var(--secondary-color-for-black);
@@ -221,37 +208,41 @@ height: 64px;
   height: 100%;
 }
 
-.hero-history-div{
- margin-top: 40px;
- margin-bottom: 72px;
- width: 320px;
+.hero-history-div {
+  margin-top: 40px;
+  margin-bottom: 72px;
+  width: 320px;
 }
-.hero-history-p{
+
+.hero-history-p {
   font-family: var(--font-poppins-regular);
   font-size: var(--font-size-caption-alt);
-    letter-spacing: var(--letter-spacing-caption-alt);
-    line-height: var(--line-height-caption-alt);
-    background-color: var(--first-background-color-for-black);
-    color: var(--text-for-black);
+  letter-spacing: var(--letter-spacing-caption-alt);
+  line-height: var(--line-height-caption-alt);
+  background-color: var(--first-background-color-for-black);
+  color: var(--text-for-black);
 }
-.hero-history-p-span{
+
+.hero-history-p-span {
   color: var(--accent-color-for-black);
 }
-.hero-social-div{
+
+.hero-social-div {
   display: flex;
   justify-content: center;
   width: 100%;
   background-color: var(--secend-background-color-for-black);
-  
 }
-.hero-social-list{
+
+.hero-social-list {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 24px;
   margin: 32px auto 32px auto;
 }
-.hero-social-li{
+
+.hero-social-li {
   font-family: var(--font-poppins-light);
   font-size: var(--font-size-body);
   line-height: var(--line-height-body);
@@ -259,16 +250,60 @@ height: 64px;
   color: var(--text-for-black);
 }
 
-/* Медиа-запросы для планшетов и десктопов */
-@media (min-width: 768px) {
-  .text-and-image {
-    flex-direction: row;
+@media (min-width: 360px) {
+  .hero-main-div {
+    width: 360px;
+    margin: 0 auto; /* Центрування елементу */
   }
 
-  .main-heading, .fullstack-developer {
+  .divHeader {
+    width: 360px;
+    margin: 0 auto; /* Центрування елементу */
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-h1 {
     font-size: var(--font-size-h1-desktop-tablet);
     letter-spacing: var(--letter-spacing-h1-desktop-tablet);
     line-height: var(--line-height-h1-desktop-tablet);
-    text-align: left;
+  }
+
+  .hero-section {
+    width: 768px;
+    margin: 0 auto; /* Центрування секції */
+  }
+
+  .divHeader {
+    width: 768px;
+    margin: 0 auto; /* Центрування елементу */
+  }
+
+  .hero-main-div {
+    width: 768px;
+    margin: 0 auto; /* Центрування елементу */
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-h1 {
+    font-size: var(--font-size-h1-desktop-tablet);
+    letter-spacing: var(--letter-spacing-h1-desktop-tablet);
+    line-height: var(--line-height-h1-desktop-tablet);
+  }
+
+  .hero-section {
+    width: 1280px;
+    margin: 0 auto; /* Центрування секції */
+  }
+
+  .divHeader {
+    width: 1280px;
+    margin: 0 auto; /* Центрування елементу */
+  }
+
+  .hero-main-div {
+    width: 1280px;
+    margin: 0 auto; /* Центрування елементу */
   }
 }
