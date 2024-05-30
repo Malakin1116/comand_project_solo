@@ -82,7 +82,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  
+  align-items: center;
 }
 
 .Header-logo {
@@ -256,13 +256,22 @@ body {
 
 
 @media (min-width: 360px) and (max-width: 767px) {
- 
+  .divHeader {
+    width: 360px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.hero-main-div {
+  width: 360px;
+    margin-right: auto;
+    margin-left: auto;
+}
 }
 
-@media (min-width: 768px) and (max-width: 1279px) {
+/* @media (min-width: 768px) and (max-width: 1279px) {
  
 }
 
 @media (min-width: 1280px) {
   
-}
+} */
