@@ -67,6 +67,8 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  max-width: 100%; /* Ограничение максимальной ширины */
+  overflow-x: hidden; /* Убирает горизонтальную прокрутку */
 }
 
 .header-main {
@@ -74,19 +76,21 @@ body {
   align-items: center;
   width: 100%;
   height: 64px;
+  max-width: 360px; /* Ограничение максимальной ширины */
 }
 
 .divHeader {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  max-width: 360px; /* Ограничение максимальной ширины */
 }
 
 .Header-logo {
   font-size: 24px;
   line-height: 24px;
   letter-spacing: 1.5px;
-  padding: 20px;
+  margin: 20px auto 20px 20px;
 }
 
 .Header-logo-span {
@@ -94,8 +98,7 @@ body {
 }
 
 .Header-menu {
-  display: flex;
-  padding: 20px;
+  margin: 20px 20px 20px auto;
 }
 
 .menu-items {
@@ -107,12 +110,13 @@ body {
 
 .menu-title {
   display: flex;
+  margin-right: 20px;
   align-items: center;
   cursor: pointer;
 }
 
 .menu-title svg {
-  margin-right: 8px;
+  margin-right: 8px; /* Відступ між іконкою і текстом */
 }
 
 /* Кнопка закрытия (иконка "X") */
@@ -133,9 +137,10 @@ body {
 .hero-section {
   height: 968px;
   width: 100%;
+  max-width: 360px; /* Ограничение максимальной ширины */
   background-color: var(--first-background-color-for-black);
   background-image: url(/img/decor.png);
-  background-size: cover; /* Это обеспечит, что изображение будет покрывать весь блок */
+  background-size: cover; /* Це забезпечить, що зображення буде покривати весь блок */
   background-position: center;
 }
 
@@ -143,14 +148,14 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 16px 20px 0px 20px;
+  padding-left: 20px; /* Внутрішні відступи для героя */
   align-items: center; /* Центрування контенту по горизонталі */
 }
 
 .hero-content {
   display: flex;
   width: 100%;
-  margin-top: 96px;
+  margin-top: 96px; /* Відступ зверху для контенту героя */
   justify-content: center; /* Центрування контенту по горизонталі */
 }
 
@@ -170,7 +175,7 @@ body {
 
 .hero-div-button {
   display: flex;
-  margin-top: 60px;
+  margin-top: 60px; /* Відступ зверху для кнопок */
   height: 96px;
   width: 100%;
   justify-content: center; /* Центрування кнопок */
@@ -182,7 +187,7 @@ body {
   letter-spacing: var(--letter-spacing-caption);
   line-height: var(--line-height-caption);
   background-color: var(--first-background-color-for-black);
-  color: var(--text-for-black);
+  color: var (--text-for-black);
   border: none;
   align-items: center;
 }
@@ -209,8 +214,8 @@ body {
 }
 
 .hero-history-div {
-  margin-top: 40px;
-  margin-bottom: 72px;
+  margin-top: 40px; /* Відступ зверху для блоку історії */
+  margin-bottom: 72px; /* Відступ знизу для блоку історії */
   width: 320px;
 }
 
@@ -221,6 +226,7 @@ body {
   line-height: var(--line-height-caption-alt);
   background-color: var(--first-background-color-for-black);
   color: var(--text-for-black);
+  padding: 16px; /* Внутрішні відступи для тексту історії */
 }
 
 .hero-history-p-span {
@@ -231,6 +237,7 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
+  max-width: 360px; /* Ограничение максимальной ширины */
   background-color: var(--secend-background-color-for-black);
 }
 
@@ -239,7 +246,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  margin: 32px auto 32px auto;
+  margin: 32px auto; /* Центрування списку соціальних іконок */
 }
 
 .hero-social-li {
@@ -250,60 +257,15 @@ body {
   color: var(--text-for-black);
 }
 
-@media (min-width: 360px) {
-  .hero-main-div {
-    width: 360px;
-    margin: 0 auto; /* Центрування елементу */
-  }
 
-  .divHeader {
-    width: 360px;
-    margin: 0 auto; /* Центрування елементу */
-  }
+@media (min-width: 360px) and (max-width: 767px) {
+ 
 }
 
-@media (min-width: 768px) {
-  .hero-h1 {
-    font-size: var(--font-size-h1-desktop-tablet);
-    letter-spacing: var(--letter-spacing-h1-desktop-tablet);
-    line-height: var(--line-height-h1-desktop-tablet);
-  }
-
-  .hero-section {
-    width: 768px;
-    margin: 0 auto; /* Центрування секції */
-  }
-
-  .divHeader {
-    width: 768px;
-    margin: 0 auto; /* Центрування елементу */
-  }
-
-  .hero-main-div {
-    width: 768px;
-    margin: 0 auto; /* Центрування елементу */
-  }
+@media (min-width: 768px) and (max-width: 1279px) {
+ 
 }
 
 @media (min-width: 1280px) {
-  .hero-h1 {
-    font-size: var(--font-size-h1-desktop-tablet);
-    letter-spacing: var(--letter-spacing-h1-desktop-tablet);
-    line-height: var(--line-height-h1-desktop-tablet);
-  }
-
-  .hero-section {
-    width: 1280px;
-    margin: 0 auto; /* Центрування секції */
-  }
-
-  .divHeader {
-    width: 1280px;
-    margin: 0 auto; /* Центрування елементу */
-  }
-
-  .hero-main-div {
-    width: 1280px;
-    margin: 0 auto; /* Центрування елементу */
-  }
+  
 }
