@@ -237,7 +237,6 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  max-width: 360px; /* Ограничение максимальной ширины */
   background-color: var(--secend-background-color-for-black);
 }
 
