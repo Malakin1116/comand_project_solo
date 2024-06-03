@@ -1,22 +1,14 @@
-document.getElementById('openModalBtn').addEventListener('click', () => {
-    const heroMainDiv = document.querySelector('.hero-main-div');
-    const existingElement = document.querySelector('.hero-main-open');
 
-    if (existingElement) {
-        existingElement.remove();
-        heroMainDiv.style.display = "block";
-    } else {
-        var newElement = document.createElement('div');
-        newElement.className = 'hero-main-open';
-        newElement.innerHTML = `
-            <ul class="menu-items-opens">
-                <li class="hero-social-li"><a href="https://www.instagram.com/goitclub/">Instagram</a></li>
-                <li class="hero-social-li"><a href="https://www.facebook.com/goITclub/">Facebook</a></li>
-                <li class="hero-social-li"><a href="#">LinkedIn</a></li>
-            </ul>
-        `;
+import * as ns from "./js/reviews";
 
-        heroMainDiv.style.display = "none"; // скрытие элемента
-        heroMainDiv.parentNode.insertBefore(newElement, heroMainDiv); // добавление нового элемента перед heroMainDiv
-    }
-});
+import * as modalWindow from "./js/modal";
+import * as workTogether from "./js/work-together.js";
+
+import { CHANGE_HTML_FOR_HERO } from "./js/mobile-menu";
+
+const CHANGE_HERO_BTN = document.getElementById('openModalBtn');
+CHANGE_HERO_BTN.addEventListener('click', CHANGE_HTML_FOR_HERO);
+
+
+
+

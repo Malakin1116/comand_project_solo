@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <header class="header-main">
-      <load ="./page_html/1Header.html" />
-    </header>    
-    <section class="hero-section">
-     <load ="./page_html/2Hero.html"/>
-    </section>
-    
 
-    <script type="module" src="./main.js"></script>
-  </body>
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Vanilla App Template</title>
+	<link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+	<load src="./partials/header.html" />
+	<main class="main">
+		<load src="./partials/hero.html" />
+		<load src="./partials/about-me.html" />
+		<load src="./partials/tech-skills.html" />
+		<load src="./partials/my-projects.html" />
+		<load src="./partials/benefits.html" />
+		<load src="./partials/faq.html" />
+		<load src="./partials/reviews.html" />
+		<load src="./partials/work-together.html"/>
+	</main>
+	<load src="./partials/footer.html" />
+	<load src="./partials/modal-window.html" />
+	<load src="./partials/mobile-menu.html" />
+	<script type="module" src="./main.js"></script>
+</body>
+
 </html>
